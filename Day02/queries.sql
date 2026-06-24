@@ -1,0 +1,68 @@
+-- Day 2: SQL - Filtering & Retrieving Data with WHERE
+-- Learning: SELECT with WHERE clause, AND, OR, comparison operators
+
+-- CREATE TABLE
+CREATE TABLE EMPLOYEE (
+    emp_id INT PRIMARY KEY,
+    NAME VARCHAR(50),
+    POSITION VARCHAR(50),
+    DEPARTMENT VARCHAR(30),
+    HIRE_DATE DATE,
+    SALARY INT
+);
+
+-- INSERT DATA
+INSERT INTO EMPLOYEE (emp_id, NAME, POSITION, DEPARTMENT, HIRE_DATE, SALARY)
+VALUES
+(1, 'SHREYA', 'DATA ANALYST', 'DATA SCIENCE', '2024-04-21', 60000),
+(2, 'ANU', 'SOFTWARE ENGINEER', 'IT', '2024-04-21', 60000),
+(3, 'RIYA', 'DATA ANALYST', 'DATA SCIENCE', '2024-04-21', 50000),
+(4, 'PRIYA', 'HR MANAGER', 'HUMAN RESOURCE', '2020-04-01', 60000),
+(5, 'NEHA', 'DATA ANALYST', 'DATA SCIENCE', '2024-04-21', 60000),
+(6, 'NIA', 'SALES EXECUTIVE', 'SALES', '2022-04-21', 60000);
+
+-- BASIC SELECT
+SELECT * FROM EMPLOYEE;
+
+-- DAY 2 PRACTICE QUERIES
+
+-- 1. WHERE with single condition
+SELECT * FROM EMPLOYEE 
+WHERE department = 'DATA SCIENCE';
+
+-- 2. WHERE with AND
+SELECT name, position, salary FROM EMPLOYEE 
+WHERE department = 'IT' AND salary > 55000;
+
+-- 3. WHERE with OR
+SELECT * FROM EMPLOYEE 
+WHERE department = 'HR' OR department = 'SALES';
+
+-- 4. Comparison operators
+SELECT name, salary FROM EMPLOYEE 
+WHERE salary >= 60000;
+
+-- 5. NOT EQUAL operator
+SELECT * FROM EMPLOYEE 
+WHERE position != 'DATA ANALYST';
+
+-- 6. BETWEEN operator
+SELECT name, salary FROM EMPLOYEE 
+WHERE salary BETWEEN 50000 AND 60000;
+
+-- 7. IN operator
+SELECT * FROM EMPLOYEE 
+WHERE department IN ('IT', 'HR', 'SALES');
+
+-- 8. LIKE operator (pattern matching)
+SELECT * FROM EMPLOYEE 
+WHERE name LIKE 'P%';
+
+-- 9. ORDER BY (sorting)
+SELECT name, salary FROM EMPLOYEE 
+WHERE salary > 55000 
+ORDER BY salary DESC;
+
+-- 10. COUNT with WHERE
+SELECT COUNT(*) as total_analysts FROM EMPLOYEE 
+WHERE position = 'DATA ANALYST';
