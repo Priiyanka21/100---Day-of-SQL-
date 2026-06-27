@@ -13,10 +13,10 @@ Learning SQL from scratch using PostgreSQL + pgAdmin 4
 | Day | Topic | Status |
 |-----|-------|--------|
 | Day 01 | CREATE TABLE, INSERT INTO, SELECT | ✅ |
-| Day 02 | SELECT, WHERE, ORDER BY | 🔜 |
-| Day 03 | GROUP BY, HAVING | 🔜 |
-| Day 04 | JOINs | 🔜 |
-| Day 05 | Subqueries | 🔜 |
+| Day 02 | SELECT, WHERE, ORDER BY |✅  |
+| Day 03 | GROUP BY, HAVING | ✅ |
+| Day 04 | JOINs | ✅ |
+| Day 05 | Subqueries | ✅ |
 
 ---
 
